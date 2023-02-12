@@ -5,5 +5,5 @@ from django.http import HttpResponse
 def index(request):
     return HttpResponse('Главная страница') # Возвращает на экран надпись
 
-def group_posts(request, slug):
-    return HttpResponse(f'Группа {slug}') # Вернет группа и слаг на экран
+def group_posts(request, name_groop):
+    return HttpResponse(f'Группа {name_groop}') # Вернет группа и слаг на экран
