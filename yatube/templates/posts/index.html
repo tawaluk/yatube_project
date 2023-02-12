@@ -1,15 +1,9 @@
 {% extends 'base.html' %}
-  <body>
-    <header>
-      <nav class="navbar navbar-light" style="background-color: lightskyblue">
-        <div class="container">
-          <a class="navbar-brand" href="index.html">
-            <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-            <span style="color:red">Ya</span>tube
-          </a>
-        </div>
-      </nav>      
-    </header>
+
+ {% block title %}
+   {{title}}
+ {% endblock title %}
+
     {% block content %}   
         <h1>Последние обновления на сайте</h1>
         <article>
@@ -42,7 +36,8 @@
             </li>
           </ul> 
           <p>
-            Исправленіе мое идетъ прекрасно. Я чувствую, какъ отношенія мои становятся пріятны и легки 
+            Исправленіе мое идетъ прекрасно. Я чувствую, какъ отношенія мои 
+            становятся пріятны и легки 
             съ людьми всякаго рода, съ тѣхъ поръ какъ я рѣшился быть скромнымъ и убѣдился въ томъ, 
             что казаться всегда величественнымъ и непогрѣшнымъ вовсе не есть необходимость. Я очень 
             веселъ. И дай Богъ, какъ мнѣ кажется, — чтобы веселье это происходило отъ самаго меня; 
@@ -76,8 +71,4 @@
           <a href="group_list.html">все записи группы</a>
         </article>
       {% endblock %}  
-    <footer class="border-top text-center py-3">
-      <p>© 2020 Copyright <span style="color:red">Ya</span>tube</p>    
-    </footer>
-  </body>
-</html>
+
