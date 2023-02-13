@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 
-{% load static %}
+
 
  {% block title %}
    {{title}}
  {% endblock %}
 
-    {% block content %}   
+    {% block content %}
+      <div class="container py-5">
         <h1>Последние обновления на сайте</h1>
         <article>
           <ul>
@@ -72,5 +73,6 @@
           </p>
           <a href="group_list.html">все записи группы</a>
         </article>
+      </div>
       {% endblock %}  
 
