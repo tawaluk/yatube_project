@@ -11,7 +11,9 @@
   {% for post in posts %}
     <ul>
       <li>
+        <h4>
         Автор: {{ post.author.get_full_name }}
+        </h4>
       </li>
       <li>
         Дата публикации: {{ post.pub_date|date:"d E Y" }}
@@ -19,13 +21,16 @@
     </ul>
     <p>{{ post.text }}</p> 
   
-    {% if post.group %}   
-      <a href="{% url 'posts:group_posts' post.group.slug %}">
-        все записи группы
-      </a>
+    {% if post.group %}
+      <p align="right">
+       <a href="{% url 'posts:group_posts' post.group.slug %}"><font      color='black'>
+          все записи группы</font>
+       </a>
+      </p>
     {% endif %}
     {% if not forloop.last %}<hr>{% endif %}
   {% endfor %}
+
 </div>
 
 {% endblock %}  
